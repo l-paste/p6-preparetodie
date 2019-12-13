@@ -1,0 +1,85 @@
+
+body {
+  background: url('../img/fond.jpg') no-repeat center center fixed;
+  color: white;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+  font-family: 'IM Fell Great Primer SC', serif;
+
+}
+
+.fond-transparent {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+td, th
+{
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid black;
+    width: 60px;
+    height: 60px;
+    padding: 5px;
+
+}
+
+#tableau-jeu img {
+	width: 100%;
+}
+
+.surlignage {
+    background: rgba(255, 255, 255, 0.4);
+}
+
+.surlignage:hover {
+  background: rgba(255, 255, 255, 0.6);
+}
+
+.btn {
+  margin: 5px;
+}
+
+.bg-stats {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.arme img {
+  background: rgba(255, 255, 255, 0.6);
+}
+
+.case-joueur {
+  background-image: url(../icones/fond-marbre.png);
+}
+
+.jeu {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.caseKO {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.joueur2 {
+ display: none;
+}
+
+progress {
+  background-color: red;
+}
+
+.modal
+{
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: 0px;
+}
+
+.modal-content {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.vousEtesMort {
+  color: red;
+  font-size: 4em;
+}

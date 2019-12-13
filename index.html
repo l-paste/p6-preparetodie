@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link href="https://fonts.googleapis.com/css?family=IM+Fell+Great+Primer+SC" rel="stylesheet">
+  <title>PREPARE TO DIE</title>
+
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+  <div class="jeu">
+    <div class="container">
+      <div class="logo">
+        <img src="img/logo.png" class="img-fluid" alt="Logo">
+      </div>
+
+      <div class="fond-transparent pl-3">
+
+        <div class="row justify-content-center">
+
+          <div class="col-lg-3 mx-auto mt-4 joueur1">
+            <div class="card text-white bg-stats p-2 text-center" id="p1Zone">
+              <div class="card-header"><img src="icones/joueur1.png" width="50%" class="img-fluid pr-3" alt="Joueur 1">
+                <h2>Joueur 1</h2>
+              </div>
+
+              <div class="text-center">
+                <progress id="barre-sante1" value="100" max="100"></progress>
+              </div>
+
+              <div id="joueur1sante"></div>
+              <p class="pt-3 arme"><span id="joueur1arme"></span> Dégats : <span id="joueur1degats"></span></p>
+              <p class="pt-3">
+                <button type="button" class="btn btn-danger btn-lg attaquer" disabled>Attaquer</button>
+                <button type="button" class="btn btn-warning btn-lg defendre" disabled>Défendre</button><br>
+                <button type="button" class="btn btn-info regles">?</button>
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 mx-auto mt-4 joueur2">
+            <div class="card text-white bg-stats p-2 text-center" id="p1Zone">
+              <div class="card-header"><img src="icones/joueur2.png" width="50%" class="img-fluid pr-3" alt="Joueur 1">
+                <h2>Joueur 2</h2>
+              </div>
+
+              <div class="text-center">
+                <progress id="barre-sante2" value="100" max="100"></progress>
+              </div>
+
+              <div id="joueur2sante"></div>
+              <p class="pt-3 arme"><span id="joueur2arme"></span> Dégats : <span id="joueur2degats"></span></p>
+              <p class="pt-3">
+                <button type="button" class="btn btn-danger btn-lg attaquer" disabled>Attaquer</button>
+                <button type="button" class="btn btn-warning btn-lg defendre" disabled>Défendre</button><br>
+                <button type="button" class="btn btn-info regles">?</button>
+              </p>
+            </div>
+          </div>
+
+          <div id="regles" class="modal fade bd-example-modal-xl" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-xl">
+              <div class="modal-content finDePartie p-2">
+                <h1 class="text-center">PREPARE TO DIE</h1>
+                <p class="h5">Vous incarnez deux chevaliers des cendres qui s'affrontent à mort dans un duel.</p>
+                <ul>
+                  <li>À gauche du plateau est affichée la fiche du chevalier dont c'est le tour.</li>
+                <li>Votre périmètre de déplacement est indiqué par les cases surlignées. Cliquez sur une case pour vous déplacer.</li>
+                <li>Les cases occupées par de mimic (un monstre ayant l'apparence d'un coffre) sont inaccessibles.</li>
+                <li>Parcourez le plateau afin d'obtenir une meilleure arme que votre adversaire, puis attaquez-le en vous placant sur une case adjacente à lui.</li>
+                <li>Vous n'êtes pas encore suffisamment équipé ? N'hésitez pas à fuire, on ne vous en voudra pas...</li>
+                <li>Une fois le combat engagé, vous pourrez à chaque tour au choix décider de vous défendre (divise les dégats par deux) ou d'attaquer. Soyez plus malin que votre adversaire !</li>
+</ul>
+<p class="h5">Bon courage !</p>
+              </div>
+            </div>
+          </div>
+
+          <div id="game-over" class="modal fade bd-example-modal-xl" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-xl">
+              <div class="modal-content finDePartie text-center p-2">
+                <h1 class="vousEtesMort">VOUS ÊTES MORT</h1>
+                <h2>Victoire du <span id="vainqueur"></span> !</h2>
+
+              </div>
+            </div>
+          </div>
+
+
+          <div class="col-lg-9 my-4 mx-auto">
+            <table id="tableau-jeu">
+            </table>
+          </div>
+
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/arme.js"></script>
+  <script src="js/joueur.js"></script>
+  <script src="js/plateau.js"></script>
+  <script src="js/partie.js"></script>
+  <script src="js/preparetodie.js"></script>
+</body>
+
+</html>
